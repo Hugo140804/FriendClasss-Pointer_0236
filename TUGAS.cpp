@@ -38,4 +38,10 @@ public:
     }
 };
 
+class LayangLayang {
+private:
+    float diagonal1, diagonal2, sisiPendek, sisiPanjang;
+ 
+public:
+
 
