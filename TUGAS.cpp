@@ -24,5 +24,10 @@ public:
         float keliling() {
         return 4 * sisi;
         }
+    }
+
+    float kelilingLayangLayang() {
+        return 2 * (sisi1 + sisi2);
+    }
 
 
