@@ -3,13 +3,12 @@ using namespace std;
 
 class LayangLayang;
 
-class BelahKetupat;
 class BelahKetupat {
 private:
     float diagonal1, diagonal2, sisi;
- 
+
 public:
-        void input() {
+    void input() {
         cout << "=== Input Belah Ketupat ===" << endl;
         cout << "Masukkan diagonal 1 : ";
         cin >> diagonal1;
@@ -18,17 +17,18 @@ public:
         cout << "Masukkan panjang sisi : ";
         cin >> sisi;
     }
-        float luas() {
+
+    float luas() {
         return 0.5 * diagonal1 * diagonal2;
-        }
-        float keliling() {
-        return 4 * sisi;
-        }
     }
 
-    float kelilingLayangLayang() {
+    float keliling() {
+        return 4 * sisi;
+    }
 
-        void output() {
+    float kelilingLayangLayang(LayangLayang &ll);
+
+    void output() {
         cout << "\n=== Output Belah Ketupat ===" << endl;
         cout << "Diagonal 1 : " << diagonal1 << endl;
         cout << "Diagonal 2 : " << diagonal2 << endl;
@@ -41,9 +41,9 @@ public:
 class LayangLayang {
 private:
     float diagonal1, diagonal2, sisiPendek, sisiPanjang;
- 
+
 public:
-        void input() {
+    void input() {
         cout << "=== Input Layang-Layang ===" << endl;
         cout << "Masukkan diagonal 1 : ";
         cin >> diagonal1;
@@ -54,11 +54,14 @@ public:
         cout << "Masukkan sisi panjang : ";
         cin >> sisiPanjang;
     }
-        float luas() {
+
+    float luas() {
         return 0.5 * diagonal1 * diagonal2;
     }
-        friend float BelahKetupat::kelilingLayangLayang(LayangLayang &ll);
-            void output(float keliling) {
+
+    friend float BelahKetupat::kelilingLayangLayang(LayangLayang &ll);
+
+    void output(float keliling) {
         cout << "\n=== Output Layang-Layang ===" << endl;
         cout << "Diagonal 1   : " << diagonal1 << endl;
         cout << "Diagonal 2   : " << diagonal2 << endl;
@@ -69,4 +72,24 @@ public:
     }
 };
 
+float BelahKetupat::kelilingLayangLayang(LayangLayang &ll) {
+    return 2 * (ll.sisiPendek + ll.sisiPanjang);
+}
 
+int main() {
+    BelahKetupat bk;
+    LayangLayang ll;
+
+    bk.input();
+    cout << endl;
+    ll.input();
+
+    bk.output();
+
+    float kelilingLL = bk.kelilingLayangLayang(ll);
+
+    // Output Layang-Layang dengan keliling dari friend function
+    ll.output(kelilingLL);
+
+    return 0;
+}
