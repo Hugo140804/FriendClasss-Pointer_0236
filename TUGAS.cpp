@@ -57,5 +57,6 @@ public:
         float luas() {
         return 0.5 * diagonal1 * diagonal2;
     }
+        friend float BelahKetupat::kelilingLayangLayang(LayangLayang &ll);
 
 
