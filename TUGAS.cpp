@@ -27,7 +27,15 @@ public:
     }
 
     float kelilingLayangLayang() {
-        return 2 * (sisi1 + sisi2);
+
+        void output() {
+        cout << "\n=== Output Belah Ketupat ===" << endl;
+        cout << "Diagonal 1 : " << diagonal1 << endl;
+        cout << "Diagonal 2 : " << diagonal2 << endl;
+        cout << "Sisi       : " << sisi << endl;
+        cout << "Luas       : " << luas() << endl;
+        cout << "Keliling   : " << keliling() << endl;
     }
+};
 
 
