@@ -54,5 +54,8 @@ public:
         cout << "Masukkan sisi panjang : ";
         cin >> sisiPanjang;
     }
+        float luas() {
+        return 0.5 * diagonal1 * diagonal2;
+    }
 
 
