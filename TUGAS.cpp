@@ -19,6 +19,9 @@ public:
     }
         float luas() {
         return 0.5 * diagonal1 * diagonal2;
-    
+        }
+        float keliling() {
+        return 4 * sisi;
+        }
 
 
