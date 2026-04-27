@@ -58,5 +58,15 @@ public:
         return 0.5 * diagonal1 * diagonal2;
     }
         friend float BelahKetupat::kelilingLayangLayang(LayangLayang &ll);
+            void output(float keliling) {
+        cout << "\n=== Output Layang-Layang ===" << endl;
+        cout << "Diagonal 1   : " << diagonal1 << endl;
+        cout << "Diagonal 2   : " << diagonal2 << endl;
+        cout << "Sisi pendek  : " << sisiPendek << endl;
+        cout << "Sisi panjang : " << sisiPanjang << endl;
+        cout << "Luas         : " << luas() << endl;
+        cout << "Keliling     : " << keliling << endl;
+    }
+};
 
 
