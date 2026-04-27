@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-Class LayangLayang;
+class LayangLayang;
 
+class BelahKetupat;
 class BelahKetupat {
 private:
     float diagonal1, diagonal2, sisi;
